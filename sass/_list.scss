@@ -1,0 +1,13 @@
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  grid-area: list;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  &__item::before {
+    content: url(../images/icon-check.svg);
+  }
+}

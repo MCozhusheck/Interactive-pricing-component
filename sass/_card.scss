@@ -1,0 +1,127 @@
+.card {
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  background-color: $color-white;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  height: 48rem;
+  grid-template-areas:
+    "views   views"
+    "slider  slider"
+    "pricing pricing"
+    "billing billing"
+    "footer  footer";
+
+  @media only screen and (min-width: 1440px) {
+    grid-template-areas:
+      "views   pricing"
+      "slider  slider"
+      "billing billing"
+      "footer  footer";
+  }
+
+  &__views {
+    grid-area: views;
+    display: flex;
+    margin: auto;
+  }
+
+  &__pricing {
+    grid-area: pricing;
+    display: flex;
+    align-items: center;
+  }
+
+  &__price {
+    color: $color-grayish-blue-4;
+    font-weight: 800;
+    font-size: 3.2rem;
+    text-align: right;
+    padding-right: 1rem;
+  }
+
+  &__period {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+
+  &__slider {
+    grid-area: slider;
+    width: 28rem;
+    height: 8px;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    background: linear-gradient(
+      to right,
+      $color-strong-cyan 0%,
+      $color-strong-cyan 50%,
+      $color-grayish-blue-1 50%,
+      $color-grayish-blue-1 100%
+    );
+    transition: background 450ms ease-in;
+    &,
+    &::-webkit-slider-runnable-track,
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-slider-thumb {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      background: url(../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $color-strong-cyan;
+      box-shadow: 1px 1rem 1.5rem rgba($color-strong-cyan, 0.5);
+    }
+  }
+
+  &__billing {
+    width: 100%;
+    grid-area: billing;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__monthly {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  &__yearly {
+    font-weight: 600;
+    font-size: 1.2rem;
+  }
+
+  &__discount {
+    background-color: $color-grayish-red;
+    color: $color-light-red;
+    font-weight: 800;
+    width: 4.5rem;
+    border-radius: 0.9rem;
+    text-align: center;
+  }
+
+  &__footer {
+    border-top: 1px $color-grayish-blue-1 solid;
+    width: 100%;
+    grid-area: footer;
+    display: grid;
+    grid-template-areas:
+      "list list"
+      "list list"
+      "list list"
+      "button button";
+    justify-content: center;
+
+    @media only screen and (min-width: 1440px) {
+      grid-template-areas:
+        "list button"
+        "list button"
+        "list button";
+    }
+  }
+}

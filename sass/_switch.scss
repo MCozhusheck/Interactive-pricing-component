@@ -1,0 +1,51 @@
+$color_checkbox_success: $color-strong-cyan;
+$color_checkbox_default: $color-grayish-blue-2;
+$transition: 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+$width: 3em;
+$height: $width/2;
+
+.switch {
+  width: $width;
+  height: $height;
+}
+
+.label {
+  position: absolute;
+}
+
+.toggle {
+  .toggle-control {
+    transition: $transition;
+    width: $width;
+    height: $height;
+    display: block;
+    border-radius: $height;
+    background-color: rgba(black, 0.06);
+    position: relative;
+    &:after {
+      transition: $transition;
+      content: "";
+      width: 1.5rem;
+      height: 1.5rem;
+      display: block;
+      background-color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+    }
+  }
+
+  input {
+    display: none;
+    &:checked + .toggle-control {
+      background-color: $color_checkbox_success;
+      &:after {
+        left: 2.5rem;
+      }
+    }
+  }
+
+  .toggle_input {
+  }
+}

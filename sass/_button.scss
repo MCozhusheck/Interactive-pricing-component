@@ -1,0 +1,11 @@
+.button {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.1rem;
+  width: 17rem;
+  border-radius: 2rem;
+  color: $color-pale-blue;
+  background-color: $color-grayish-blue-4;
+}

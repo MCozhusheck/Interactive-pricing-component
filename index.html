@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="./scripts/slider.js"></script>
+    <title>
+      Frontend Mentor | Interactive pricing component | Maciej Kożuszek
+    </title>
+  </head>
+  <body class="container">
+    <header class="header">
+      <p class="header__title">Simple, traffic based pricing</p>
+      <div class="header__subtitle">
+        <p class="header__subtitle--paragraph-1">
+          Sign-up for our 30-day trial.
+        </p>
+        <p class="header__subtitle--paragraph-2">No credit card required.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <p class="card__views">100K PAGEVIEWS</p>
+      <input
+        type="range"
+        class="card__slider"
+        min="0"
+        max="4"
+        step="1"
+        value="2"
+        onInput="calculatePrice(this.value)"
+        onChange="calculatePrice(this.value)"
+      />
+      <div class="card__pricing">
+        <p class="card__price">$16.00</p>
+        <p class="card__period">/ month</p>
+      </div>
+      <div class="card__billing">
+        <p class="card__monthly">Monthly Billing</p>
+        <div class="switch">
+          <label class="label toggle">
+            <input
+              type="checkbox"
+              class="toggle_input"
+              onChange="toggleSwitch(this.value)"
+              onInput="toggleSwitch(this.value)"
+            />
+            <div class="toggle-control"></div>
+          </label>
+        </div>
+        <p class="card__yearly">Yearly Billing</p>
+        <p class="card__discount">-25%</p>
+      </div>
+      <div class="card__footer">
+        <div class="list">
+          <div class="list__item">Unlimited websites</div>
+          <div class="list__item">100% data ownership</div>
+          <div class="list__item">Email reports</div>
+        </div>
+        <div class="button">Start my trial</div>
+      </div>
+    </div>
+  </body>
+</html>
