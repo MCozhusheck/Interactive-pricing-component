@@ -32,46 +32,49 @@
         <p class="header__subtitle--paragraph-2">No credit card required.</p>
       </div>
     </header>
-
-    <div class="card">
-      <p class="card__views">100K PAGEVIEWS</p>
-      <input
-        type="range"
-        class="card__slider"
-        min="0"
-        max="4"
-        step="1"
-        value="2"
-        onInput="calculatePrice(this.value)"
-        onChange="calculatePrice(this.value)"
-      />
-      <div class="card__pricing">
-        <p class="card__price">$16.00</p>
-        <p class="card__period">/ month</p>
-      </div>
-      <div class="card__billing">
-        <p class="card__monthly">Monthly Billing</p>
-        <div class="switch">
-          <label class="label toggle">
-            <input
-              type="checkbox"
-              class="toggle_input"
-              onChange="toggleSwitch(this.value)"
-              onInput="toggleSwitch(this.value)"
-            />
-            <div class="toggle-control"></div>
-          </label>
+    <div class="card__container">
+      <div class="card">
+        <p class="card__views">100K PAGEVIEWS</p>
+        <input
+          type="range"
+          class="card__slider"
+          min="0"
+          max="4"
+          step="1"
+          value="2"
+          onInput="calculatePrice(this.value)"
+          onChange="calculatePrice(this.value)"
+        />
+        <div class="card__pricing">
+          <p class="card__price">$16.00</p>
+          <p class="card__period">/ month</p>
         </div>
-        <p class="card__yearly">Yearly Billing</p>
-        <p class="card__discount">-25%</p>
-      </div>
-      <div class="card__footer">
-        <div class="list">
-          <div class="list__item">Unlimited websites</div>
-          <div class="list__item">100% data ownership</div>
-          <div class="list__item">Email reports</div>
+        <div class="card__billing__container">
+          <div class="card__billing">
+            <p class="card__monthly">Monthly Billing</p>
+            <div class="switch">
+              <label class="label toggle">
+                <input
+                  type="checkbox"
+                  class="toggle_input"
+                  onChange="toggleSwitch(this.value)"
+                  onInput="toggleSwitch(this.value)"
+                />
+                <div class="toggle-control"></div>
+              </label>
+            </div>
+            <p class="card__yearly">Yearly Billing</p>
+            <p class="card__discount">-25%</p>
+          </div>
         </div>
-        <div class="button">Start my trial</div>
+        <div class="card__footer">
+          <div class="list">
+            <div class="list__item">Unlimited websites</div>
+            <div class="list__item">100% data ownership</div>
+            <div class="list__item">Email reports</div>
+          </div>
+          <div class="button">Start my trial</div>
+        </div>
       </div>
     </div>
   </body>

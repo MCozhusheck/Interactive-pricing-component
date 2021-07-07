@@ -30,6 +30,7 @@ body {
 .card {
   box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  width: 32.5rem;
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 9rem 4rem 6rem 9rem 20rem;
@@ -37,6 +38,7 @@ body {
   grid-template-areas: "views   views" "slider  slider" "pricing pricing" "billing billing" "footer  footer"; }
   @media only screen and (min-width: 1440px) {
     .card {
+      width: 54rem;
       grid-template-areas: "views   pricing" "slider  slider" "billing billing" "footer  footer"; } }
   .card__views {
     grid-area: views;
@@ -88,11 +90,15 @@ body {
       border-color: #10d5c2;
       box-shadow: 1px 1rem 1.5rem rgba(16, 213, 194, 0.5); }
   .card__billing {
-    width: 100%;
-    grid-area: billing;
     display: flex;
     align-items: center;
     gap: 1rem; }
+    .card__billing__container {
+      width: 100%;
+      grid-area: billing;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
   .card__monthly {
     margin-left: 3.5rem;
     font-weight: 600;
@@ -124,6 +130,7 @@ body {
   background-size: 100% 40rem;
   background-repeat: no-repeat;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin: 0 2.5rem; }
 
