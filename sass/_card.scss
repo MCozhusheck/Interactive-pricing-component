@@ -3,8 +3,8 @@
   background-color: $color-white;
   display: grid;
   grid-template-columns: auto;
+  grid-template-rows: 9rem 4rem 6rem 9rem 20rem;
   justify-items: center;
-  height: 48rem;
   grid-template-areas:
     "views   views"
     "slider  slider"
@@ -74,6 +74,19 @@
       background-repeat: no-repeat;
       background-position: center;
       background-color: $color-strong-cyan;
+      border-color: $color-strong-cyan;
+      box-shadow: 1px 1rem 1.5rem rgba($color-strong-cyan, 0.5);
+    }
+    &::-moz-range-thumb {
+      position: relative;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 100%;
+      background: url(../images/icon-slider.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: $color-strong-cyan;
+      border-color: $color-strong-cyan;
       box-shadow: 1px 1rem 1.5rem rgba($color-strong-cyan, 0.5);
     }
   }
@@ -83,10 +96,11 @@
     grid-area: billing;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 1rem;
   }
 
   &__monthly {
+    margin-left: 3.5rem;
     font-weight: 600;
     font-size: 1.2rem;
   }
@@ -100,6 +114,7 @@
     background-color: $color-grayish-red;
     color: $color-light-red;
     font-weight: 800;
+    margin-right: 1rem;
     width: 4.5rem;
     border-radius: 0.9rem;
     text-align: center;
