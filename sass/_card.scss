@@ -13,8 +13,9 @@
     "billing billing"
     "footer  footer";
 
-  @media only screen and (min-width: 1440px) {
+  @include respond(big-desktop) {
     width: 54rem;
+    grid-template-rows: 12rem 4rem 10rem 13.5rem;
     grid-template-areas:
       "views   pricing"
       "slider  slider"
@@ -24,8 +25,14 @@
 
   &__views {
     grid-area: views;
+    font-weight: 800;
+    font-size: 1.2rem;
     display: flex;
     margin: auto;
+    @include respond(big-desktop) {
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+    }
   }
 
   &__pricing {
@@ -40,11 +47,17 @@
     font-size: 3.2rem;
     text-align: right;
     padding-right: 1rem;
+    @include respond(big-desktop) {
+      font-size: 4rem;
+    }
   }
 
   &__period {
     font-weight: 600;
     font-size: 1.4rem;
+    @include respond(big-desktop) {
+      font-size: 1.6rem;
+    }
   }
 
   &__slider {
@@ -91,12 +104,19 @@
       border-color: $color-strong-cyan;
       box-shadow: 1px 1rem 1.5rem rgba($color-strong-cyan, 0.5);
     }
+
+    @include respond(big-desktop) {
+      width: 44rem;
+    }
   }
 
   &__billing {
     display: flex;
     align-items: center;
     gap: 1rem;
+    @include respond(big-desktop) {
+      gap: 1.5rem;
+    }
 
     &__container {
       width: 100%;
@@ -132,19 +152,16 @@
     border-top: 1px $color-grayish-blue-1 solid;
     width: 100%;
     grid-area: footer;
-    display: grid;
-    grid-template-areas:
-      "list list"
-      "list list"
-      "list list"
-      "button button";
-    justify-content: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 
     @media only screen and (min-width: 1440px) {
-      grid-template-areas:
-        "list button"
-        "list button"
-        "list button";
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      padding: 4rem;
     }
   }
 }

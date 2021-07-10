@@ -13,14 +13,14 @@ body {
   height: 100vh;
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
-  color: #858fad; }
+  color: #858fad;
+  background-color: #fafbff; }
 
 .button {
   grid-area: button;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3rem;
   height: 4.1rem;
   width: 17rem;
   border-radius: 2rem;
@@ -39,11 +39,18 @@ body {
   @media only screen and (min-width: 1440px) {
     .card {
       width: 54rem;
+      grid-template-rows: 12rem 4rem 10rem 13.5rem;
       grid-template-areas: "views   pricing" "slider  slider" "billing billing" "footer  footer"; } }
   .card__views {
     grid-area: views;
+    font-weight: 800;
+    font-size: 1.2rem;
     display: flex;
     margin: auto; }
+    @media only screen and (min-width: 1440px) {
+      .card__views {
+        font-size: 1.4rem;
+        letter-spacing: 2px; } }
   .card__pricing {
     grid-area: pricing;
     display: flex;
@@ -54,9 +61,15 @@ body {
     font-size: 3.2rem;
     text-align: right;
     padding-right: 1rem; }
+    @media only screen and (min-width: 1440px) {
+      .card__price {
+        font-size: 4rem; } }
   .card__period {
     font-weight: 600;
     font-size: 1.4rem; }
+    @media only screen and (min-width: 1440px) {
+      .card__period {
+        font-size: 1.6rem; } }
   .card__slider {
     grid-area: slider;
     width: 28rem;
@@ -89,10 +102,16 @@ body {
       background-color: #10d5c2;
       border-color: #10d5c2;
       box-shadow: 1px 1rem 1.5rem rgba(16, 213, 194, 0.5); }
+    @media only screen and (min-width: 1440px) {
+      .card__slider {
+        width: 44rem; } }
   .card__billing {
     display: flex;
     align-items: center;
     gap: 1rem; }
+    @media only screen and (min-width: 1440px) {
+      .card__billing {
+        gap: 1.5rem; } }
     .card__billing__container {
       width: 100%;
       grid-area: billing;
@@ -118,12 +137,16 @@ body {
     border-top: 1px #eaeefb solid;
     width: 100%;
     grid-area: footer;
-    display: grid;
-    grid-template-areas: "list list" "list list" "list list" "button button";
-    justify-content: center; }
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column; }
     @media only screen and (min-width: 1440px) {
       .card__footer {
-        grid-template-areas: "list button" "list button" "list button"; } }
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding: 4rem; } }
 
 .container {
   background-image: url(../images/bg-pattern.svg);
@@ -146,17 +169,30 @@ body {
   height: 14.5rem;
   margin-top: 3rem;
   margin-bottom: 3.2rem;
-  font-size: 2rem;
-  font-weight: 800;
   width: 100%; }
+  @media only screen and (min-width: 1440px) {
+    .header {
+      margin-top: 6.7rem;
+      margin-bottom: 5.4rem; } }
   .header__title {
+    font-size: 2rem;
+    font-weight: 800;
     color: #293356; }
+    @media only screen and (min-width: 1440px) {
+      .header__title {
+        font-size: 2.8rem; } }
   .header__subtitle {
     line-height: 2.3rem;
     font-weight: 600;
-    font-size: 1.3rem; }
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column; }
+    @media only screen and (min-width: 1440px) {
+      .header__subtitle {
+        flex-direction: row;
+        font-size: 1.5rem; } }
     .header__subtitle--paragraph-1 {
-      margin-top: 1rem;
       text-align: center; }
     .header__subtitle--paragraph-2 {
       text-align: center; }
@@ -165,13 +201,16 @@ body {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 2.5rem;
   gap: 1rem;
   grid-area: list;
   font-weight: 600;
   font-size: 1.2rem; }
+  @media only screen and (min-width: 1440px) {
+    .list {
+      align-items: flex-start; } }
   .list__item::before {
-    content: url(../images/icon-check.svg); }
+    content: url(../images/icon-check.svg);
+    margin-right: 1.5rem; }
 
 .switch {
   width: 3em;

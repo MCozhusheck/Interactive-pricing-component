@@ -2,13 +2,17 @@
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  margin-top: 2.5rem;
   gap: 1rem;
   grid-area: list;
   font-weight: 600;
   font-size: 1.2rem;
 
+  @include respond(big-desktop) {
+    align-items: flex-start;
+  }
+
   &__item::before {
     content: url(../images/icon-check.svg);
+    margin-right: 1.5rem;
   }
 }
